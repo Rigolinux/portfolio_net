@@ -1,0 +1,37 @@
+﻿@model Persona;
+
+@{
+    ViewData["Title"] = "Home Page";
+    string Uppercase(string value)
+    {
+        return value.ToUpper();
+    }
+
+    DateTime Today = DateTime.Now;
+
+    var ListNames = new List<string>() { "felipe", "Claudia", "Roberto" };
+}
+
+<div class="text-center">
+    <h1 class="display-4">Hello Mi name is @Model.Name </h1>
+    <h2>@Today.ToString("dd/MM/yyyy hh:mm:ss")</h2>
+    @if(Model.Age >= 18)
+    {
+        <h2>I'am old</h2>
+    }
+    else
+    {
+        <h2>I'am young</h2>
+    }
+
+    @foreach(var names in ListNames)
+    {
+        <h2> @names </h2>
+        
+    }
+
+    <h2>
+        I have @ViewBag.age I'm a fullstack developer with technologies .Net y JS  and my las name is  @Uppercase(Model.LastName)
+    </h2>
+    <img src="~/images/foto.png" alt="Portillo" class="foto" />
+</div>
