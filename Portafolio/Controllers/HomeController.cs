@@ -14,15 +14,43 @@ namespace Portafolio.Controllers
         }
         // this is a action 
 
+        private List<Proyect> GetProjects()
+        {
+            return new List<Proyect>()
+            {
+                new Proyect
+                {
+                    Title = "Project 1",
+                    Description = "list and create an E-comerce with ASP.NET Core",
+                    Link = "http://example.com",
+                    ImageURL = ""
+                },
+                new Proyect
+                {
+                    Title = "Project 2",
+                    Description = "list and create an E-comerce with ASP.NET Core",
+                    Link = "http://example.com",
+                    ImageURL = ""
+                },
+                new Proyect
+                {
+                    Title = "Project 3",
+                    Description = "list and create an E-comerce with ASP.NET Core",
+                    Link = "http://example.com",
+                    ImageURL = ""
+                }
+            };
+        }
+
         public IActionResult Index()
         {
             //ViewBag.Name = "Rigoberto";
 
             var persona = new Persona()
-            { Name= "Rigoberto", LastName = "Portillo", Age= 16 };
+           // { Name= "Rigoberto", LastName = "Portillo", Age= 16 };
 
 
-            ViewBag.age = "32";
+           // ViewBag.age = "32";
             return View(persona);
           //  return View("Index2");
         }
