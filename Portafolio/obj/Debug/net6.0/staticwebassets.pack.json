@@ -17,12 +17,24 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Proyectos\\Asp.net\\Portafolio\\Portafolio\\wwwroot\\images\\amazon.PNG",
+      "PackagePath": "staticwebassets\\images\\amazon.PNG"
+    },
+    {
       "Id": "D:\\Proyectos\\Asp.net\\Portafolio\\Portafolio\\wwwroot\\images\\foto.png",
       "PackagePath": "staticwebassets\\images\\foto.png"
     },
     {
       "Id": "D:\\Proyectos\\Asp.net\\Portafolio\\Portafolio\\wwwroot\\images\\net.png",
       "PackagePath": "staticwebassets\\images\\net.png"
+    },
+    {
+      "Id": "D:\\Proyectos\\Asp.net\\Portafolio\\Portafolio\\wwwroot\\images\\nyt.PNG",
+      "PackagePath": "staticwebassets\\images\\nyt.PNG"
+    },
+    {
+      "Id": "D:\\Proyectos\\Asp.net\\Portafolio\\Portafolio\\wwwroot\\images\\reddit.PNG",
+      "PackagePath": "staticwebassets\\images\\reddit.PNG"
     },
     {
       "Id": "D:\\Proyectos\\Asp.net\\Portafolio\\Portafolio\\wwwroot\\js\\site.js",

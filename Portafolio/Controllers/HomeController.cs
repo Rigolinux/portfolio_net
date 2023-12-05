@@ -23,21 +23,21 @@ namespace Portafolio.Controllers
                     Title = "Project 1",
                     Description = "list and create an E-comerce with ASP.NET Core",
                     Link = "http://example.com",
-                    ImageURL = ""
+                    ImageURL = "/images/amazon.png"
                 },
                 new Proyect
                 {
                     Title = "Project 2",
                     Description = "list and create an E-comerce with ASP.NET Core",
                     Link = "http://example.com",
-                    ImageURL = ""
+                    ImageURL = "/images/nyt.png"
                 },
                 new Proyect
                 {
                     Title = "Project 3",
                     Description = "list and create an E-comerce with ASP.NET Core",
                     Link = "http://example.com",
-                    ImageURL = ""
+                    ImageURL = "/images/reddit.png"
                 }
             };
         }
@@ -46,13 +46,16 @@ namespace Portafolio.Controllers
         {
             //ViewBag.Name = "Rigoberto";
 
-            var persona = new Persona()
-           // { Name= "Rigoberto", LastName = "Portillo", Age= 16 };
+            // var persona = new Persona()
+            // { Name= "Rigoberto", LastName = "Portillo", Age= 16 };
 
+            var proyect = GetProjects().Take(3).ToList();
+
+            var model = new HomeIndexViewModel() { Proyects = proyect };
 
            // ViewBag.age = "32";
-            return View(persona);
           //  return View("Index2");
+            return View(model);
         }
         // this is a action 
         public IActionResult Privacy()
