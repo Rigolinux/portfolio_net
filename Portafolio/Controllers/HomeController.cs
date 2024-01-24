@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Portafolio.Models;
+using Portafolio.Services;
 using System.Diagnostics;
 
 namespace Portafolio.Controllers
@@ -7,40 +8,16 @@ namespace Portafolio.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly RepositoryProjects instanceRepoProyects;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, RepositoryProjects InstanceRepoProyects)
         {
             _logger = logger;
+            instanceRepoProyects = InstanceRepoProyects;
         }
         // this is a action 
 
-        private List<Proyect> GetProjects()
-        {
-            return new List<Proyect>()
-            {
-                new Proyect
-                {
-                    Title = "Project 1",
-                    Description = "list and create an E-comerce with ASP.NET Core",
-                    Link = "http://example.com",
-                    ImageURL = "/images/amazon.png"
-                },
-                new Proyect
-                {
-                    Title = "Project 2",
-                    Description = "list and create an E-comerce with ASP.NET Core",
-                    Link = "http://example.com",
-                    ImageURL = "/images/nyt.png"
-                },
-                new Proyect
-                {
-                    Title = "Project 3",
-                    Description = "list and create an E-comerce with ASP.NET Core",
-                    Link = "http://example.com",
-                    ImageURL = "/images/reddit.png"
-                }
-            };
-        }
+        
 
         public IActionResult Index()
         {
@@ -49,7 +26,9 @@ namespace Portafolio.Controllers
             // var persona = new Persona()
             // { Name= "Rigoberto", LastName = "Portillo", Age= 16 };
 
-            var proyect = GetProjects().Take(3).ToList();
+            
+
+            var proyect = instanceRepoProyects.GetProjects().Take(3).ToList();
 
             var model = new HomeIndexViewModel() { Proyects = proyect };
 
