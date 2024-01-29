@@ -7,9 +7,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddTransient<IRepositoryProjects, RepositoryProjects>();
 
-builder.Services.AddTransient<TransitoryService>();
-builder.Services.AddScoped<DelimtedServices>();
-builder.Services.AddSingleton<UniqueServices>();
+
 
 var app = builder.Build();
 

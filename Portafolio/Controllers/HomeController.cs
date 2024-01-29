@@ -9,21 +9,13 @@ namespace Portafolio.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IRepositoryProjects instanceRepoProyects;
-        private readonly DelimtedServices delimtedServices;
-        private readonly UniqueServices uniqueServices;
-        private readonly TransitoryService transitoryService;
+       
 
-        public HomeController(ILogger<HomeController> logger, IRepositoryProjects InstanceRepoProyects,
-            DelimtedServices  delimtedServices,
-            UniqueServices uniqueServices,
-            TransitoryService transitoryService
-            )
+        public HomeController(ILogger<HomeController> logger, IRepositoryProjects InstanceRepoProyects)
         {
             _logger = logger;
             instanceRepoProyects = InstanceRepoProyects;
-            this.delimtedServices = delimtedServices;
-            this.uniqueServices = uniqueServices;
-            this.transitoryService = transitoryService;
+           
         }
         // this is a action 
 
@@ -36,20 +28,16 @@ namespace Portafolio.Controllers
             // var persona = new Persona()
             // { Name= "Rigoberto", LastName = "Portillo", Age= 16 };
 
-            
+            _logger.LogInformation("login data");
+            _logger.LogCritical("Unexpected somethin");
 
             var proyect = instanceRepoProyects.GetProjects().Take(3).ToList();
 
-            var guidViewModel = new ExampleGUIViewModel()
-            {
-                Delimited = delimtedServices.GetGuid,
-                Unique = uniqueServices.GetGuid,
-                Transitory = transitoryService.GetGuid
-            };
+           
 
             var model = new HomeIndexViewModel() { 
                 Proyects = proyect,
-                ExampleGUI = guidViewModel
+
             };
 
            // ViewBag.age = "32";
@@ -57,7 +45,26 @@ namespace Portafolio.Controllers
             return View(model);
         }
         // this is a action 
-        public IActionResult Privacy()
+        public IActionResult Proyects()
+        {
+            var proyect = instanceRepoProyects.GetProjects();
+
+            return View(proyect);
+        }
+
+  
+        public IActionResult Contact()
+        {
+            return View();
+        }
+        
+        [HttpPost]
+        public IActionResult Contact(ContactViewModel contactViewModel)
+        {
+            return RedirectToAction("Thanks");        
+        }
+
+        public IActionResult Thanks()
         {
             return View();
         }
@@ -67,5 +74,7 @@ namespace Portafolio.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
     }
 }

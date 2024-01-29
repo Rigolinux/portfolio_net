@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Proyectos\Asp.net\Portafolio\Portafolio
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Proyectos/Asp.net/Portafolio/Portafolio/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Proyectos/Asp.net/Portafolio/Portafolio/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -28,6 +32,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Proyectos/Asp.net/Portafolio/Portafolio/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Proyectos/Asp.net/Portafolio/Portafolio/Views/Home/Proyects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm95ZWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Proyectos/Asp.net/Portafolio/Portafolio/Views/Home/Thanks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaGFua3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Proyectos/Asp.net/Portafolio/Portafolio/Views/Home/_ListProyect.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfTGlzdFByb3llY3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Proyectos/Asp.net/Portafolio/Portafolio/Views/Home/_presentation.cshtml]
